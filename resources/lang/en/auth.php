@@ -15,6 +15,13 @@ return [
     'failed'   => 'These credentials do not match our records.',
     'password' => 'The provided password is incorrect.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'app' => [
+        'create' => 'Create',
+        'export' => 'Export',
+        'print' => 'Print',
+        'reset' => 'Reset',
+        'reload' => 'Reload'
+    ],
     'login' => [
         'title' => 'Sign In',
         'field' => [
@@ -73,7 +80,7 @@ return [
         'button' => [
             'submit' => 'Send Password Reset Link',
             'login' => 'Login',
-            'register'=>'Register a new membership'
+            'register' => 'Register a new membership'
         ]
     ]
 ];

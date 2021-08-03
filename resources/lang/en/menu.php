@@ -24,6 +24,9 @@ return [
     ],
     'attendances'=>[
         'title'=>'Checkin/out'
+    ],
+    'content' => [
+        'title' => 'Content'
     ]
 
 

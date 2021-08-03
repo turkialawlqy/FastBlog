@@ -40,6 +40,31 @@ $isUserActive = Request::is($urlAdmin.'*attendances*');
 </li>
 @endcan
 
+@canany(['catalogs.index'])
+@php
+$isCatalogActive = Request::is($urlAdmin.'*catalogs*');
+@endphp
+<li class="nav-item {{($isCatalogActive)?'menu-open':''}} ">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-book"></i>
+        <p>
+            @lang('menu.content.title')
+            <i class="fas fa-angle-left right"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        @can('catalogs.index')
+        <li class="nav-item">
+            <a href="{{ route('catalogs.index') }}" class="nav-link {{ $isCatalogActive ? 'active' : '' }}">
+                <i class="nav-icon fas fa-book"></i>
+                <p>@lang('models/catalogs.plural')</p>
+            </a>
+        </li>
+        @endcan
+    </ul>
+</li>
+@endcan
+
 @canany(['users.index','roles.index','permissions.index'])
 @php
 $isUserActive = Request::is($urlAdmin.'*users*');

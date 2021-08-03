@@ -12,18 +12,21 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-    'dashboard'=>'Bảng điều khiển',
+    'dashboard' => 'Bảng điều khiển',
     'user' => [
-        'title'=>'Bảo mật',
+        'title' => 'Bảo mật',
         'users' => 'Tài khoản',
         'roles' => 'Vai trò',
         'permissions' => 'Quyền'
     ],
-    'generator_builder'=>[
-        'title'=>'Generator Builder'
+    'generator_builder' => [
+        'title' => 'Generator Builder'
     ],
-    'attendances'=>[
-        'title'=>'Chấm công'
+    'attendances' => [
+        'title' => 'Chấm công'
+    ],
+    'content' => [
+        'title' => 'Nội dung'
     ]
 
 

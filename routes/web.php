@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +19,7 @@ Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controller
 Auth::routes();
 
 Route::get('/', function () {
-    return redirect(route('dashboard'));
+    return class_basename(get_class(User::find(1)));
 })->name('home');
 
 Route::get('/checkOnline', function (App\Repositories\AttendanceRepository $attendanceRepo) {

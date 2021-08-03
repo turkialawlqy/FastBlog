@@ -7,9 +7,11 @@ use Illuminate\Auth\Events\Authenticated;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
-use  App\Listeners\UserAuthenticated;
-use  App\Listeners\UserLogout;
+use App\Listeners\UserAuthenticated;
+use App\Listeners\UserLogout;
+
+use App\Models\Catalog;
+use App\Observers\CatalogObserver;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -38,5 +40,7 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+
+        Catalog::observe(CatalogObserver::class);
     }
 }
